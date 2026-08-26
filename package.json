@@ -25,7 +25,6 @@
     "@angular/router": "^19.2.15",
     "@angular/ssr": "^19.2.17",
     "@netlify/angular-runtime": "^3.0.0",
-    "bootstrap": "^5.3.7",
     "eslint": "^9.31.0",
     "express": "^4.18.2",
     "rxjs": "~7.8.0",
