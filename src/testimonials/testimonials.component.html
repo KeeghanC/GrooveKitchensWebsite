@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="mb-1">
+    <h1>Testimonials</h1>
+  </div>
+
+  <div class="carousel-container">
+    <!-- Left arrow -->
+    <button class="nav-btn left" (click)="prev()">‹</button>
+
+    <!-- Testimonial card -->
+    <div class="testimonial-card">
+      <p class="text">“{{ testimonials[currentIndex].text }}”</p>
+      <h4 class="person">{{ testimonials[currentIndex].person }}</h4>
+      <span class="location">{{ testimonials[currentIndex].location }}</span>
+    </div>
+
+    <!-- Right arrow -->
+    <button class="nav-btn right" (click)="next()">›</button>
+  </div>
+
+  <!-- Progress bar -->
+  <div class="progress-bar">
+    <div class="progress" [style.width.%]="(timeElapsed / interval) * 100"></div>
+  </div>
+</div>

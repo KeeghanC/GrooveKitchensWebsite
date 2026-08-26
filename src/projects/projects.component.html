@@ -1,0 +1,17 @@
+<section class="inspiration-section container">
+  <div class="inspiration-heading">
+    <p class="eyebrow">Ideas for your next space</p>
+    <h1>Kitchen Inspiration</h1>
+    <p class="section-intro">
+      Explore a few starting points for your kitchen. We can shape the layout, materials, and
+      storage around your home.
+    </p>
+  </div>
+  <div class="row inspiration-grid">
+    @for (project of projects; track project) {
+      <div class="col-12 col-sm-6 col-lg-6">
+        <app-project [project]="project"></app-project>
+      </div>
+    }
+  </div>
+</section>

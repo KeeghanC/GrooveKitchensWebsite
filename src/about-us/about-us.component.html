@@ -1,0 +1,31 @@
+<section class="about-us">
+  <h1>About Groove Kitchens</h1>
+
+  <div class="content-wrapper">
+    <div class="text-content">
+      <p>
+        Groove Kitchens creates kitchens that feel considered, practical, and personal. We take the
+        time to understand how you use your home, then turn that into a layout, materials palette,
+        and storage plan that works beautifully every day.
+      </p>
+      <p>
+        From a small kitchen refresh to a full renovation, we guide you through the important
+        decisions, from cabinetry and benchtops to appliances, lighting, and finishing details.
+      </p>
+      <p>
+        You can expect straightforward advice, thoughtful design, and clear communication throughout
+        the process. Our aim is a kitchen you will enjoy using for years to come.
+      </p>
+      <p>{{ missionStatement }}</p>
+    </div>
+  </div>
+
+  <div class="certifications">
+    <h2>Why choose Groove Kitchens</h2>
+    <ul>
+      @for (certs of certificatesAndCompliances; track certs) {
+        <li>{{ certs }}</li>
+      }
+    </ul>
+  </div>
+</section>

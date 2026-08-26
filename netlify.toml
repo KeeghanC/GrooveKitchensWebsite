@@ -1,5 +1,4 @@
 [build]
-  base = "GrooveKitchensWebsite"
   command = "npm run build"
   publish = "dist/groove-kitchens-website/browser"
 
