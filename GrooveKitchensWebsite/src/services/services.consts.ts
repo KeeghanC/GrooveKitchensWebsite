@@ -11,7 +11,7 @@ export const servicesOffered: TService[] = [
   },
   {
     serviceTitle: 'Benchtops, Hardware & Finishes',
-    serviceDescription: 'Choose finishes that look great and work hard—from durable benchtops and handles to sinks, tapware, lighting, and appliance integration.',
+    serviceDescription: 'Choose finishes that look great and work hard, from durable benchtops and handles to sinks, tapware, lighting, and appliance integration.',
   },
   {
     serviceTitle: 'Kitchen Renovations & Installation',
