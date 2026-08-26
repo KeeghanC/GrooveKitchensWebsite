@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://groovekitchens.netlify.app/sitemap.xml

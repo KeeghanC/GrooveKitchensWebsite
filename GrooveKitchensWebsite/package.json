@@ -1,5 +1,5 @@
 {
-  "name": "jurlina-contractors-website",
+  "name": "groove-kitchens-website",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:JurlinaContractorsWebsite": "node dist/jurlina-contractors-website/server/server.mjs"
+    "serve:ssr:GrooveKitchensWebsite": "node dist/groove-kitchens-website/server/server.mjs"
   },
   "private": true,
   "dependencies": {

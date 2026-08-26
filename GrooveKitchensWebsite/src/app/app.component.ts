@@ -18,7 +18,7 @@ import { Meta, Title } from '@angular/platform-browser';
   styleUrl: './app.component.scss'
 })
 export class AppComponent implements OnInit {
-  readonly title = 'Jurlina Contractors | Earthmoving & Excavation Auckland';
+  readonly title = 'Groove Kitchens | Earthmoving & Excavation Auckland';
 
   constructor(private titleService: Title, private metaService: Meta) { }
   ngOnInit(): void {
@@ -27,13 +27,13 @@ export class AppComponent implements OnInit {
     // Add meta tags
     this.metaService.addTags([
       { name: 'description', content: 'Professional contracting services in Auckland. Quality guaranteed.' },
-      { name: 'keywords', content: 'contractors, Auckland, construction, Jurlina' },
-      { name: 'author', content: 'Jurlina Contractors' },
-      { property: 'og:title', content: 'Jurlina Contractors' },
+      { name: 'keywords', content: 'Groove Kitchens, Auckland, construction, earthmoving, excavation' },
+      { name: 'author', content: 'Groove Kitchens' },
+      { property: 'og:title', content: 'Groove Kitchens' },
       { property: 'og:description', content: 'Trusted contracting services in Auckland.' },
       { property: 'og:type', content: 'website' }
     ]);
 
-    this.metaService.addTag({ rel: 'canonical', href: 'https://jurlinacontractors.co.nz' }, true);
+    this.metaService.addTag({ rel: 'canonical', href: 'https://groovekitchens.netlify.app' }, true);
   }
 }

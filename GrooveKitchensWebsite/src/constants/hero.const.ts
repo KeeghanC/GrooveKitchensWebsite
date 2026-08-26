@@ -1,5 +1,5 @@
 export const heroContent = {
-  title: 'Jurlina Contractors, Where experience counts',
+  title: 'Groove Kitchens, Where experience counts',
   subtitle: 'Delivering expert excavation, site preparation, and land shaping services across Auckland and Northland.',
   ctaText: 'Get a Free Quote',
   ctaLink: '/contact',

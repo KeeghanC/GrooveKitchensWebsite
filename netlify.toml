@@ -1,7 +1,7 @@
 [build]
-  base = "JurlinaContractorsWebsite"
+  base = "GrooveKitchensWebsite"
   command = "npm run build"
-  publish = "dist/jurlina-contractors-website/browser"
+  publish = "dist/groove-kitchens-website/browser"
 
 [build.environment]
   NODE_VERSION = "22"

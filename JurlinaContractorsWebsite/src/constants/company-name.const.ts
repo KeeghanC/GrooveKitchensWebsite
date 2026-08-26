@@ -1,1 +1,0 @@
-export const companyName = 'Jurlina Contractors';
