@@ -1,0 +1,7 @@
+[build]
+  base = "JurlinaContractorsWebsite"
+  command = "npm run build"
+  publish = "dist/jurlina-contractors-website/browser"
+
+[build.environment]
+  NODE_VERSION = "22"
