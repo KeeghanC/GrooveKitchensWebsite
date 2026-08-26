@@ -5,6 +5,7 @@ export const projects: TProject[] = [
     title: 'Modern Family Kitchen',
     description:
       'A practical, welcoming kitchen concept with generous preparation space, durable finishes, and storage for busy family life.',
+    image: 'assets/kitchen-inspiration-sample.png',
   },
   {
     title: 'Compact Kitchen Renovation',

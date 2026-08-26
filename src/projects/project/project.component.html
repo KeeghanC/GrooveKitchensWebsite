@@ -1,6 +1,10 @@
 <div class="project-card">
-  <div class="project-visual" aria-hidden="true">
-    <span>Kitchen concept</span>
+  <div class="project-visual">
+    @if (project.image) {
+      <img [src]="project.image" [alt]="project.title" />
+    } @else {
+      <span>Kitchen concept</span>
+    }
   </div>
   <div class="project-content">
     <h3 class="project-title">{{ project.title }}</h3>
