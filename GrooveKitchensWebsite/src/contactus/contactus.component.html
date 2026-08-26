@@ -1,27 +1,23 @@
 <div class="contact-us-container">
   <h1>Contact Groove Kitchens</h1>
-  <p class="centered">For experience that counts.</p>
+  <p class="centered">Tell us about your kitchen and we will help you take the next step.</p>
   <div class="contact-content">
-    <!-- Contact Info -->
     <section class="contact-info">
-      <h2>Get in Touch</h2>
+      <h2>Start Your Kitchen Project</h2>
       <p><strong>Mobile: </strong> <a href="tel:{{ contactDetails.mobileNumber }}">{{ contactDetails.mobileNumber }}</a></p>
       <p><strong>Email: </strong> {{ contactDetails.email }}</p>
     </section>
 
-    <!-- Contact Form -->
     <section class="contact-form-section">
-      <h2>Send Us a Message</h2>
+      <h2>Request a Free Consultation</h2>
 
-      <!-- Success message -->
       @if (submitted) {
         <div class="success-message">
-          ✅ Thanks for your message - we'll be in touch soon.
+          Thanks for your enquiry — we'll be in touch soon.
         </div>
       }
 
       <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)" novalidate>
-        <!-- Name -->
         <div class="form-group">
           <label for="name">Name <span class="required">*</span></label>
           <input
@@ -39,7 +35,6 @@
           }
         </div>
 
-        <!-- Email -->
         <div class="form-group">
           <label for="email">Email <span class="required">*</span></label>
           <input
@@ -58,7 +53,6 @@
           }
         </div>
 
-        <!-- Phone -->
         <div class="form-group">
           <label for="phone">Phone</label>
           <input
@@ -66,13 +60,24 @@
             id="phone"
             name="phone"
             ngModel
-            placeholder="+64 21 123 4567"
+            placeholder="021 397 863"
           />
         </div>
 
-        <!-- Message -->
         <div class="form-group">
-          <label for="message">Message <span class="required">*</span></label>
+          <label for="projectType">What do you need help with?</label>
+          <select id="projectType" name="projectType" ngModel>
+            <option value="">Select an option</option>
+            <option value="new-kitchen">New kitchen</option>
+            <option value="renovation">Kitchen renovation</option>
+            <option value="cabinetry">Cabinetry and storage</option>
+            <option value="benchtops">Benchtops and finishes</option>
+            <option value="advice">Design advice</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Tell us about your project <span class="required">*</span></label>
           <textarea
             id="message"
             name="message"
@@ -81,14 +86,14 @@
             rows="5"
             #message="ngModel"
             [class.invalid]="message.invalid && message.touched"
-            placeholder="Write your message here..."
+            placeholder="Tell us about your space, ideas, and preferred timeframe..."
           ></textarea>
           @if (message.invalid && message.touched) {
-            <div class="error">Message is required.</div>
+            <div class="error">Please tell us a little about your project.</div>
           }
         </div>
 
-        <button type="submit" [disabled]="contactForm.invalid">Send Message</button>
+        <button type="submit" [disabled]="contactForm.invalid">Request a Quote</button>
       </form>
     </section>
   </div>

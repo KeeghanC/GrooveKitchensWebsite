@@ -2,23 +2,19 @@ import { TService } from "./service/service.type";
 
 export const servicesOffered: TService[] = [
   {
-    serviceTitle: 'Site Clearing & Preparation',
-    serviceDescription: 'Complete clearing of vegetation, rocks, and debris to prepare your site for residential or commercial construction. Fast, efficient, and compliant with local council requirements.',
-    imageUrl: '../assets/service_1_tractor.jpg',
+    serviceTitle: 'Kitchen Design & Planning',
+    serviceDescription: 'Bring your ideas, plans, and inspiration to a collaborative design process. We help shape a kitchen layout that suits your home, lifestyle, and budget.',
   },
   {
-    serviceTitle: 'Creek & River Management',
-    serviceDescription: 'Specialised slash control, waterway management, and restoration services. We unblock watercourses to ensure optimal water flow and protect natural ecosystems.',
-    imageUrl: '../assets/service_creek.jpg',
+    serviceTitle: 'Custom Cabinetry & Storage',
+    serviceDescription: 'Make every centimetre count with cabinetry, drawers, pantry storage, and integrated solutions designed around how you cook and live.',
   },
   {
-    serviceTitle: 'Demolition & Removal',
-    serviceDescription: 'Safe removal of homes, sheds, fencing, and other structures. Includes waste disposal and thorough site clean-up.',
-    imageUrl: '../assets/service_demolition.jpg',
+    serviceTitle: 'Benchtops, Hardware & Finishes',
+    serviceDescription: 'Choose finishes that look great and work hard—from durable benchtops and handles to sinks, tapware, lighting, and appliance integration.',
   },
   {
-    serviceTitle: 'Professional Advice',
-    serviceDescription: 'Sound advice on all aspects of land contouring, clearing, mulching, re-grassing, and excavation projects—big or small.',
-    imageUrl: '../assets/service_4_tractor.jpg',
+    serviceTitle: 'Kitchen Renovations & Installation',
+    serviceDescription: 'Whether you are refreshing an existing space or planning a complete renovation, we coordinate the details for a smooth, well-finished result.',
   }
 ] as const satisfies TService[];

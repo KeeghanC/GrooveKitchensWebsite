@@ -9,7 +9,7 @@
   transition: box-shadow 0.25s ease, transform 0.25s ease;
   border: 1px solid #e5e7eb;
   max-width: 500px;
-  min-height: 475px;
+  min-height: 260px;
 
   &:hover {
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
@@ -31,18 +31,4 @@
     }
   }
 
-  .service-image-wrapper {
-    display: flex;
-    justify-content: flex-end;
-    margin-top: auto; // pushes image down
-
-    .service-image {
-      max-width: 100%;   // keeps it from being huge
-      max-height: 100%;  // hard height cap
-      height: auto;       // keeps proportions
-      border-radius: 0.5rem;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-      object-fit: contain;
-    }
-  }
 }

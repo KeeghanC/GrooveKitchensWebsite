@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { heroContent } from '../constants/hero.const';
-import { PHONE_HREF } from '../constants/phone-href.const';
 
 @Component({
     selector: 'app-hero',
@@ -11,5 +10,4 @@ import { PHONE_HREF } from '../constants/phone-href.const';
 export class HeroComponent {
   hero = heroContent;
 
-  phoneHref = PHONE_HREF;
 }

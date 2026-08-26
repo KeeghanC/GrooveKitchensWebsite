@@ -3,22 +3,22 @@ import { TTestimonial } from "./testimonial.type";
 export const testimonials: TTestimonial[] = [
   {
     person: "Grace",
-    location: "Coatesville, Auckland",
-    text: "I employed Groove Kitchens to clear out debris from my creek boundary which was blocked in many places resulting in two major floods. All rubbish, wood and logs were removed resulting in a good flow of water and less chance of flooding on my property. I highly recommend the team for this work. They are hard working, affordable and professional."
+    location: "Auckland",
+    text: "Groove Kitchens listened carefully to how our family uses the space and helped us create a kitchen that is both beautiful and genuinely easy to live in. The process felt clear from the first conversation through to the final details."
   },
   {
     person: "Havard",
-    location: "Kaipara, Auckland",
-    text: "The Groove Kitchens team does a great job at mulching properties and converting them from being overgrown and run down to looking parklike. Over the years, they have attended to all my mulching work. Whether it's scrub, privet or gorse, we highly recommend them for anyone needing tractor mulching!"
+    location: "Auckland",
+    text: "We had a compact kitchen with very limited storage. The new layout makes every cupboard and drawer work harder, and the room feels much more open. We could not be happier with the result."
   },
   {
     person: "Warwick",
-    location: "Waimauku, Auckland",
-    text: "The Groove Kitchens team did a great job at clearing my block which was covered in scrub. They are experts in mulching, earthmoving and land clearing. They offer an excellent service and I have used them on various properties. Recommend them, first call!"
+    location: "Auckland",
+    text: "The team made the big decisions much easier, from the cabinetry style to the benchtop and hardware. Their advice was practical, and the finished kitchen feels exactly right for our home."
   },
   {
     person: "Simon and Glenda",
-    location: "Kumeu, Auckland",
-    text: "Groove Kitchens has years of experience which makes them stand out above other contractors I have engaged in the past. They are experts in land clearing, mulching and earthworks. They are skilled, site safe and hard working. They recently completed site works, a driveway construction and added a pond for irrigation. The team always offers an excellent service."
+    location: "Auckland",
+    text: "Our renovation was handled with care and attention to detail. Groove Kitchens gave us a clear plan, kept communication simple, and delivered a kitchen that feels timeless and functional."
   }
 ];

@@ -3,9 +3,7 @@ import { TProject } from '../project.type';
 
 const defaultProject: TProject = {
   title: 'Default Project Title',
-  description: 'Default Project Description',
-  imageUrl: 'assets/default-project.jpg',
-  location: 'Default Location'
+  description: 'Default Project Description'
 };
 
 @Component({

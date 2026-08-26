@@ -1,1 +1,1 @@
-export const missionStatement = 'Our mission is to provide honest, professional service with a personal touch. We build strong client relationships through transparency, quality workmanship, and a can-do attitude.'
+export const missionStatement = 'Our mission is to make the kitchen-design process clear, enjoyable, and tailored to the people who will use the space every day.'

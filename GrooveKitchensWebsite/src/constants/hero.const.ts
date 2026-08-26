@@ -1,10 +1,6 @@
 export const heroContent = {
-  title: 'Groove Kitchens, Where experience counts',
-  subtitle: 'Delivering expert excavation, site preparation, and land shaping services across Auckland and Northland.',
-  ctaText: 'Get a Free Quote',
+  title: 'Kitchens designed for the way you live',
+  subtitle: 'Groove Kitchens creates thoughtful, practical kitchens—from first ideas and cabinetry design through to installation and finishing touches.',
+  ctaText: 'Request a Free Consultation',
   ctaLink: '/contact',
-  image: {
-    src: 'assets/hero.jpg',
-    alt: 'Excavator working on a construction site'
-  }
 } as const;

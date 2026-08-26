@@ -5,7 +5,6 @@ import { WindowSizeService } from '../app-services/window-size.service';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { Router } from '@angular/router';
 import { contactDetails, mobileOneWord } from '../constants/contact-details.consts';
-import { PHONE_HREF } from '../constants/phone-href.const';
 
 @Component({
     selector: 'app-nav',
@@ -16,7 +15,6 @@ import { PHONE_HREF } from '../constants/phone-href.const';
 export class NavComponent {
   nav = NAV_CONTENT;
 
-  phoneHref = PHONE_HREF;
 
   // Default to on
   showLinks = true;

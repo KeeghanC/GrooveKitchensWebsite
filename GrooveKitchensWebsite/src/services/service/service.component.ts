@@ -3,8 +3,7 @@ import { TService } from './service.type';
 
 const defaultService: TService = {
   serviceTitle: 'Default Service Title',
-  serviceDescription: 'Default Service Description',
-  imageUrl: '../assets/4.jpg' // Default image URL
+  serviceDescription: 'Default Service Description'
 };
 
 @Component({
