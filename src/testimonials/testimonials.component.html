@@ -5,7 +5,9 @@
 
   <div class="carousel-container">
     <!-- Left arrow -->
-    <button class="nav-btn left" (click)="prev()">‹</button>
+    <button class="nav-btn left" type="button" aria-label="Previous testimonial" (click)="prev()">
+      ‹
+    </button>
 
     <!-- Testimonial card -->
     <div class="testimonial-card">
@@ -15,7 +17,9 @@
     </div>
 
     <!-- Right arrow -->
-    <button class="nav-btn right" (click)="next()">›</button>
+    <button class="nav-btn right" type="button" aria-label="Next testimonial" (click)="next()">
+      ›
+    </button>
   </div>
 
   <!-- Progress bar -->

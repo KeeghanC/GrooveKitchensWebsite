@@ -1,7 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
+import { Component, DestroyRef, Inject, OnInit, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { NavComponent } from '../nav/nav.component';
 import { Meta, Title } from '@angular/platform-browser';
+import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
+import { filter } from 'rxjs';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 
 @Component({
   selector: 'app-root',
@@ -10,36 +14,51 @@ import { Meta, Title } from '@angular/platform-browser';
   styleUrl: './app.component.scss',
 })
 export class AppComponent implements OnInit {
-  readonly title = 'Groove Kitchens | Kitchen Design & Renovations Auckland';
+  private readonly destroyRef = inject(DestroyRef);
 
   constructor(
-    private titleService: Title,
-    private metaService: Meta,
+    private readonly titleService: Title,
+    private readonly metaService: Meta,
+    private readonly router: Router,
+    private readonly activatedRoute: ActivatedRoute,
+    @Inject(DOCUMENT) private readonly document: Document,
   ) {}
+
   ngOnInit(): void {
-    this.titleService.setTitle(this.title);
+    this.updateSeo();
+    this.router.events
+      .pipe(
+        filter((event) => event instanceof NavigationEnd),
+        takeUntilDestroyed(this.destroyRef),
+      )
+      .subscribe(() => this.updateSeo());
+  }
 
-    // Add meta tags
-    this.metaService.addTags([
-      {
-        name: 'description',
-        content:
-          'Groove Kitchens designs and renovates practical, beautiful kitchens across Auckland.',
-      },
-      {
-        name: 'keywords',
-        content:
-          'Groove Kitchens, Auckland kitchens, kitchen design, kitchen renovation, custom cabinetry',
-      },
-      { name: 'author', content: 'Groove Kitchens' },
-      { property: 'og:title', content: 'Groove Kitchens' },
-      {
-        property: 'og:description',
-        content: 'Thoughtful kitchen design, cabinetry, and renovations across Auckland.',
-      },
-      { property: 'og:type', content: 'website' },
-    ]);
+  private updateSeo(): void {
+    let route = this.activatedRoute;
+    while (route.firstChild) {
+      route = route.firstChild;
+    }
 
-    this.metaService.addTag({ rel: 'canonical', href: 'https://groovekitchens.netlify.app' }, true);
+    const title = route.snapshot.data['title'] ?? 'Groove Kitchens';
+    const description =
+      route.snapshot.data['description'] ?? 'Thoughtful kitchen design across Auckland.';
+    const url = `https://groovekitchens.netlify.app${this.router.url === '/' ? '' : this.router.url}`;
+
+    this.titleService.setTitle(title);
+    this.metaService.updateTag({ name: 'description', content: description });
+    this.metaService.updateTag({ name: 'author', content: 'Groove Kitchens' });
+    this.metaService.updateTag({ property: 'og:title', content: title });
+    this.metaService.updateTag({ property: 'og:description', content: description });
+    this.metaService.updateTag({ property: 'og:type', content: 'website' });
+    this.metaService.updateTag({ property: 'og:url', content: url });
+
+    let canonical = this.document.head.querySelector('link[rel="canonical"]');
+    if (!canonical) {
+      canonical = this.document.createElement('link');
+      canonical.setAttribute('rel', 'canonical');
+      this.document.head.appendChild(canonical);
+    }
+    canonical.setAttribute('href', url);
   }
 }

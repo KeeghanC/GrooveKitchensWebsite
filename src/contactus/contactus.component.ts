@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { contactDetails } from '../constants/contact-details.consts';
 import { FormsModule, NgForm } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
-import { catchError } from 'rxjs/operators';
+import { catchError, finalize } from 'rxjs/operators';
 import { of } from 'rxjs';
 
 @Component({
@@ -14,17 +14,26 @@ import { of } from 'rxjs';
 export class ContactusComponent {
   contactDetails = contactDetails;
   submitted = false;
+  submitting = false;
+  submitError = '';
 
   constructor(private http: HttpClient) {}
 
   onSubmit(form: NgForm) {
-    if (form.valid) {
+    if (form.valid && !this.submitting) {
+      this.submitting = true;
+      this.submitError = '';
       this.http
         .post('https://formspree.io/f/xpwlgevy', form.value, {
           headers: { Accept: 'application/json' },
         })
         .pipe(
-          catchError(() => of(null)), // gracefully handle errors
+          catchError(() => {
+            this.submitError =
+              'We could not send your enquiry right now. Please call or email us directly.';
+            return of(null);
+          }),
+          finalize(() => (this.submitting = false)),
         )
         .subscribe((response) => {
           if (response) {

@@ -15,7 +15,13 @@
       <h2>Request a Free Consultation</h2>
 
       @if (submitted) {
-        <div class="success-message">Thanks for your enquiry, we'll be in touch soon.</div>
+        <div class="success-message" role="status">
+          Thanks for your enquiry, we'll be in touch soon.
+        </div>
+      }
+
+      @if (submitError) {
+        <div class="error-message" role="alert">{{ submitError }}</div>
       }
 
       <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)" novalidate>
@@ -88,7 +94,9 @@
           }
         </div>
 
-        <button type="submit" [disabled]="contactForm.invalid">Request a Quote</button>
+        <button type="submit" [disabled]="contactForm.invalid || submitting">
+          {{ submitting ? 'Sending...' : 'Request a Quote' }}
+        </button>
       </form>
     </section>
   </div>
