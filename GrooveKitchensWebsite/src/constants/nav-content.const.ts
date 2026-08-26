@@ -8,7 +8,7 @@ export const NAV_CONTENT = {
   links: [
     { label: 'Home', url: '/' },
     { label: 'Services', url: '/services' },
-    { label: 'Projects', url: '/projects' },
+    { label: 'Kitchen Inspiration', url: '/projects' },
     { label: 'About', url: '/about' },
     { label: 'Contact', url: '/contact' },
     { label: 'Testimonials', url: '/testimonials' }
