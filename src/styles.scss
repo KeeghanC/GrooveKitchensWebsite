@@ -13,6 +13,66 @@ body {
   font-family: Arial, sans-serif;
 }
 
+.contact-info .call-me {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 1.25rem 0 1.5rem;
+  padding: 1rem 1.25rem;
+  background: #302a24;
+  color: #fffaf3;
+  border-radius: 0.6rem;
+  text-decoration: none;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.contact-info .call-me:hover {
+  background: #4a4036;
+  transform: translateY(-1px);
+}
+
+.call-me-icon {
+  display: grid;
+  flex: 0 0 2.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  place-items: center;
+  background: #c8945a;
+  border-radius: 50%;
+}
+
+.call-me-icon svg,
+.nav-call svg {
+  width: 1.25rem;
+  height: 1.25rem;
+  fill: #302a24;
+}
+
+.call-me-copy {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.call-me-copy small {
+  color: #d9c9b7;
+  font-size: 0.75rem;
+}
+
+.call-me-copy strong,
+.call-me-number {
+  font-weight: 700;
+}
+
+.call-me-number {
+  color: #f2c991;
+  font-size: 1.05rem;
+}
+
 .row {
   display: flex;
   flex-wrap: wrap;

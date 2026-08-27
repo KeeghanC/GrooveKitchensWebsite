@@ -4,6 +4,7 @@ import { FormsModule, NgForm } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { catchError, finalize } from 'rxjs/operators';
 import { of } from 'rxjs';
+import { PHONE_HREF } from '../constants/phone-href.const';
 
 @Component({
   selector: 'app-contactus',
@@ -13,6 +14,7 @@ import { of } from 'rxjs';
 })
 export class ContactusComponent {
   contactDetails = contactDetails;
+  phoneHref = PHONE_HREF;
   submitted = false;
   submitting = false;
   submitError = '';
