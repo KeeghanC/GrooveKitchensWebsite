@@ -54,24 +54,27 @@
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    padding: 0.4rem 0.75rem;
-    color: #fffaf3;
+    padding: 0.55rem 1rem;
+    background: #3b322b;
+    color: #e8ded0;
     border: 1px solid rgba(242, 201, 145, 0.65);
     border-radius: 9999px;
     text-decoration: none;
     line-height: 1.15;
     transition:
       background 0.2s ease,
-      border-color 0.2s ease;
+      border-color 0.2s ease,
+      transform 0.2s ease;
 
     &:hover {
-      background: rgba(200, 148, 90, 0.18);
+      background: #4a4036;
       border-color: #f2c991;
+      transform: translateY(-1px);
     }
 
     svg {
-      width: 1.1rem;
-      height: 1.1rem;
+      width: 1.25rem;
+      height: 1.25rem;
       fill: #f2c991;
     }
 
@@ -82,31 +85,16 @@
     }
 
     .nav-call-label {
-      color: #f2c991;
+      color: #e8ded0;
       font-size: 0.7rem;
-      font-weight: 700;
+      font-weight: 800;
       text-transform: uppercase;
       letter-spacing: 0.05em;
     }
 
     .nav-call-number {
       font-size: 0.85rem;
-      font-weight: 600;
-    }
-  }
-
-  .nav-cta {
-    cursor: pointer;
-    background-color: #c8945a;
-    color: #302a24;
-    padding: 0.5rem 1rem;
-    border-radius: 9999px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: background-color 0.2s ease;
-
-    &:hover {
-      background-color: #b27b43;
+      font-weight: 700;
     }
   }
 
