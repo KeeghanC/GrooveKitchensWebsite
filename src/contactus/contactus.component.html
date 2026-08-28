@@ -22,7 +22,22 @@
         </span>
         <span class="call-me-number">{{ contactDetails.mobileNumber }}</span>
       </a>
-      <p><strong>Email: </strong> {{ contactDetails.email }}</p>
+      <a
+        class="call-me email-me"
+        [href]="'mailto:' + contactDetails.email"
+        [attr.aria-label]="'Email Groove Kitchens at ' + contactDetails.email"
+      >
+        <span class="call-me-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            <path d="M3.5 5.5h17v13h-17v-13Zm1.8 1.7v.2l6.7 4.7 6.7-4.7v-.2H5.3Zm13.4 9.6V9.5L12 14.2 5.3 9.5v7.3h13.4Z" />
+          </svg>
+        </span>
+        <span class="call-me-copy">
+          <small>Prefer to email?</small>
+          <strong>Email me</strong>
+        </span>
+        <span class="call-me-number">{{ contactDetails.email }}</span>
+      </a>
     </section>
 
     <section class="contact-form-section">
