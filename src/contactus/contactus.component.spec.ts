@@ -29,7 +29,7 @@ describe('ContactusComponent', () => {
       value: {
         name: 'Test Customer',
         email: 'customer@example.com',
-        phone: '021 397 863',
+        phone: '021 123 4567',
         projectType: 'new-kitchen',
         message: 'We would like help planning a new kitchen.',
       },
