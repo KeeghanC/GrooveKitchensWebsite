@@ -1,5 +1,7 @@
 <div class="service-card">
-  <div class="service-visual" aria-hidden="true"></div>
+  <div class="service-visual">
+    <img [src]="service.image" [alt]="service.serviceTitle" loading="lazy" decoding="async" />
+  </div>
   <div class="service-content">
     <h3 class="title">{{ service.serviceTitle }}</h3>
     <p class="description">{{ service.serviceDescription }}</p>

@@ -4,6 +4,7 @@ import { TService } from './service.type';
 const defaultService: TService = {
   serviceTitle: 'Default Service Title',
   serviceDescription: 'Default Service Description',
+  image: 'assets/kitchen-inspiration-sample.webp',
 };
 
 @Component({
