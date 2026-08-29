@@ -1,16 +1,34 @@
-<section class="inspiration-section container">
-  <div class="inspiration-heading">
+<section class="projects-section recent-work-section container">
+  <div class="projects-heading">
+    <p class="eyebrow">Completed kitchens</p>
+    <h1>Recent Work</h1>
+    <p class="section-intro">A selection of genuine Groove Kitchens projects.</p>
+  </div>
+  <div class="row projects-grid">
+    @for (project of completedProjects; track project.title) {
+      <div class="col-12 col-sm-6 col-lg-6 col-xl-3">
+        <app-project class="recent-project" [project]="project"></app-project>
+      </div>
+    }
+  </div>
+</section>
+
+<div class="section-divider" aria-hidden="true"><span></span></div>
+
+<section class="projects-section container inspiration-section">
+  <div class="projects-heading">
     <p class="eyebrow">Ideas for your next space</p>
-    <h1>Kitchen Inspiration</h1>
+    <h2>Kitchen Inspiration</h2>
     <p class="section-intro">
       Explore a few starting points for your kitchen. We can shape the layout, materials, and
       storage around your home.
     </p>
+    <p class="image-disclosure">These images are design concepts to help inspire your project.</p>
   </div>
-  <div class="row inspiration-grid">
+  <div class="row projects-grid">
     @for (project of projects; track project) {
       <div class="col-12 col-sm-6 col-lg-6">
-        <app-project [project]="project"></app-project>
+        <app-project class="inspiration-project" [project]="project"></app-project>
       </div>
     }
   </div>

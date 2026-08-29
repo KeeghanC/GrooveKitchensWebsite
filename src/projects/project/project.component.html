@@ -2,6 +2,9 @@
   <div class="project-visual">
     @if (project.image) {
       <img [src]="project.image" [alt]="project.title" />
+      @if (project.imageAttribution) {
+        <span class="image-attribution">{{ project.imageAttribution }}</span>
+      }
     } @else {
       <span>Kitchen concept</span>
     }

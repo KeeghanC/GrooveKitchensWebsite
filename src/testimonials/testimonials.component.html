@@ -4,25 +4,28 @@
   </div>
 
   <div class="carousel-container">
-    <!-- Left arrow -->
     <button class="nav-btn left" type="button" aria-label="Previous testimonial" (click)="prev()">
       ‹
     </button>
 
-    <!-- Testimonial card -->
     <div class="testimonial-card">
       <p class="text">“{{ testimonials[currentIndex].text }}”</p>
       <h4 class="person">{{ testimonials[currentIndex].person }}</h4>
-      <span class="location">{{ testimonials[currentIndex].location }}</span>
+      <a
+        class="review-source"
+        [href]="testimonials[currentIndex].sourceUrl"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Read all verified reviews on NoCowboys
+      </a>
     </div>
 
-    <!-- Right arrow -->
     <button class="nav-btn right" type="button" aria-label="Next testimonial" (click)="next()">
       ›
     </button>
   </div>
 
-  <!-- Progress bar -->
   <div class="progress-bar">
     <div class="progress" [style.width.%]="(timeElapsed / interval) * 100"></div>
   </div>

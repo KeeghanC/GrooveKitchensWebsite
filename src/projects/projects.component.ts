@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { projects } from './projects.consts';
+import { completedProjects, projects } from './projects.consts';
 import { ProjectComponent } from './project/project.component';
 
 @Component({
@@ -9,5 +9,6 @@ import { ProjectComponent } from './project/project.component';
   styleUrl: './projects.component.scss',
 })
 export class ProjectsComponent {
-  projects = projects;
+  readonly completedProjects = completedProjects;
+  readonly projects = projects;
 }

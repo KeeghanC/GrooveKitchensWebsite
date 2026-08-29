@@ -44,6 +44,14 @@ body {
   margin-top: 0;
   background: linear-gradient(135deg, #4a4036 0 46%, #302a24 46% 54%, #4a4036 54% 100%);
   font-style: normal;
+  transition:
+    filter 0.2s ease,
+    transform 0.2s ease;
+}
+
+.contact-info .workshop-card:hover {
+  background: linear-gradient(135deg, #4a4036 0 46%, #302a24 46% 54%, #4a4036 54% 100%);
+  filter: brightness(1.05);
 }
 
 .contact-info .workshop-card::after {
@@ -164,5 +172,11 @@ body {
 
   .col-lg-6 {
     width: 50%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .col-xl-3 {
+    width: 25%;
   }
 }

@@ -4,4 +4,28 @@
   justify-content: center;
   align-items: center;
   width: 100%;
+  max-width: 1600px;
+  margin: 3rem auto 5rem;
+  padding: 0 1rem;
+
+  // The shared row uses negative margins. Removing them here keeps the
+  // services grid within the same left and right gutter as its heading.
+  .row {
+    margin-right: 0;
+    margin-left: 0;
+    align-items: stretch;
+
+    [class*='col-'] {
+      display: flex;
+      padding: 1rem 3rem;
+    }
+  }
+}
+
+// Retain comfortable card widths before there is room for three cards and
+// their wider gutters.
+@media (min-width: 992px) and (max-width: 1250px) {
+  .container .row .col-lg-4 {
+    width: 50%;
+  }
 }

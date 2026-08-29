@@ -8,7 +8,72 @@
   max-width: 1200px;
 }
 
-.inspiration-heading {
+.projects-section {
+  margin-bottom: 2rem;
+}
+
+.recent-work-section {
+  max-width: 1600px;
+  margin-top: 5rem;
+
+  // Keep completed-project cards substantial on ordinary desktop screens.
+  // Four columns are reserved for genuinely wide viewports.
+  .col-xl-3 {
+    width: 33.333333%;
+  }
+
+  @media (min-width: 1600px) {
+    .col-xl-3 {
+      width: 25%;
+    }
+  }
+}
+
+.inspiration-section {
+  margin-top: 2rem;
+
+  .row {
+    margin-right: 0;
+    margin-left: 0;
+
+    [class*='col-'] {
+      display: flex;
+      padding: 1rem 3rem;
+    }
+  }
+}
+
+.section-divider {
+  display: flex;
+  align-items: center;
+  width: min(100% - 2rem, 30rem);
+  margin: 3rem auto;
+  gap: 1rem;
+
+  &::before,
+  &::after {
+    flex: 1;
+    height: 1px;
+    content: '';
+    background: linear-gradient(90deg, transparent, #302a24);
+  }
+
+  &::after {
+    transform: scaleX(-1);
+  }
+
+  span {
+    width: 0.7rem;
+    height: 0.7rem;
+    background: #302a24;
+    border: 3px solid #fffaf3;
+    border-radius: 0.15rem;
+    box-shadow: 0 0 0 1px rgba(48, 42, 36, 0.22);
+    transform: rotate(45deg);
+  }
+}
+
+.projects-heading {
   max-width: 720px;
   text-align: center;
   margin: 0 auto 2.5rem;
@@ -22,7 +87,8 @@
     text-transform: uppercase;
   }
 
-  h1 {
+  h1,
+  h2 {
     margin-bottom: 0.75rem;
   }
 
@@ -31,8 +97,14 @@
     color: #6b7280;
     line-height: 1.7;
   }
+
+  .image-disclosure {
+    margin: 1rem 0 0;
+    color: #4b5563;
+    font-size: 0.9rem;
+  }
 }
 
-.inspiration-grid {
+.projects-grid {
   align-items: stretch;
 }
