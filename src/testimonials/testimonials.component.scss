@@ -1,8 +1,12 @@
 .container {
   max-width: 700px;
-  margin: 0 auto;
+  margin: var(--page-section-space) auto;
   text-align: center;
   margin-bottom: 0;
+}
+
+:host-context(.testimonials-background) .container {
+  margin: 0 auto;
 }
 
 .carousel-container {
@@ -34,6 +38,12 @@
 .person {
   font-weight: 600;
   margin-bottom: 0.25rem;
+
+  span {
+    color: #6b7280;
+    font-size: 0.85rem;
+    font-weight: 400;
+  }
 }
 
 .review-source {

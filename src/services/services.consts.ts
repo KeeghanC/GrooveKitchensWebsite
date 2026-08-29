@@ -5,7 +5,7 @@ export const servicesOffered: TService[] = [
     serviceTitle: 'Kitchen Design, Making & Installation',
     serviceDescription:
       'From your first ideas and home visit through to custom cabinetry and installation, we create kitchens around your home, lifestyle, and budget.',
-    image: 'assets/portfolio/completed-white-island-kitchen.webp',
+    image: 'assets/service-kitchen-design.webp',
   },
   {
     serviceTitle: 'Kitchen Renovations & Facelifts',

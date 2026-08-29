@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+:root {
+  --page-section-space: clamp(2.5rem, 5vw, 4rem);
+}
+
 html {
   min-width: 320px;
 }

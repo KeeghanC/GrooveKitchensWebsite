@@ -39,6 +39,12 @@
   }
 }
 
+@media (max-width: 720px) {
+  .section-divider {
+    display: none;
+  }
+}
+
 .green-background::before {
   content: '';
   position: absolute;
