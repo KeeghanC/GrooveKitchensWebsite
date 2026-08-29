@@ -4,7 +4,7 @@
   </div>
   <div class="row">
     @for (service of services; track service.serviceTitle) {
-      <div class="col-12 col-sm-6 col-lg-4">
+      <div class="col-12 col-lg-4">
         <app-service [service]="service" />
       </div>
     }

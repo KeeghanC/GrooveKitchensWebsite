@@ -22,10 +22,10 @@
   }
 }
 
-// Retain comfortable card widths before there is room for three cards and
+// Keep service cards single-column until there is room for three cards and
 // their wider gutters.
 @media (min-width: 992px) and (max-width: 1250px) {
   .container .row .col-lg-4 {
-    width: 50%;
+    width: 100%;
   }
 }
