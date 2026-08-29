@@ -1,4 +1,5 @@
 .contact-us-container {
+  width: 100%;
   max-width: 900px;
   margin: var(--page-section-space) auto;
   padding: 0 1rem;
@@ -24,11 +25,20 @@
 
     @media (max-width: 720px) {
       flex-direction: column;
+
+      .contact-info,
+      .contact-form-section {
+        max-width: calc(100vw - 2rem);
+        margin-right: auto;
+        margin-left: auto;
+      }
     }
 
     .contact-info,
     .contact-form-section {
       flex: 1 1 400px;
+      width: 100%;
+      min-width: 0;
       background: #f9fafb; // light gray
       padding: 2rem;
       border-radius: 0.75rem;
@@ -149,5 +159,31 @@
         }
       }
     }
+  }
+}
+
+@media (max-width: 475px) {
+  .contact-us-container .contact-info .email-me .call-me-copy {
+    display: none;
+  }
+}
+
+@media (max-width: 400px) {
+  .contact-us-container .contact-info .workshop-card {
+    justify-content: flex-start;
+
+    .call-me-copy {
+      display: none;
+    }
+
+    .workshop-location {
+      text-align: left;
+    }
+  }
+}
+
+@media (max-width: 345px) {
+  .contact-us-container .contact-info > a.call-me:first-of-type .call-me-copy {
+    display: none;
   }
 }

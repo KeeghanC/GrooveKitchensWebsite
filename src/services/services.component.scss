@@ -35,6 +35,13 @@
   }
 }
 
+@media (max-width: 799px) {
+  .container .row [class*='col-'] {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+  }
+}
+
 // Use a two-column layout at medium widths before moving to three columns.
 @media (min-width: 992px) and (max-width: 1250px) {
   .container .row .col-lg-4 {
