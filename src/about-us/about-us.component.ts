@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { certificatesAndCompliances } from '../constants/compliance-and-certificates.consts';
-import { missionStatement } from '../constants/mission-statement.const';
 
 @Component({
   selector: 'app-about-us',
@@ -10,6 +9,4 @@ import { missionStatement } from '../constants/mission-statement.const';
 })
 export class AboutUsComponent {
   certificatesAndCompliances = certificatesAndCompliances;
-
-  missionStatement = missionStatement;
 }

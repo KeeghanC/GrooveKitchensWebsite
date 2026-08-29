@@ -1,10 +1,10 @@
 <div class="container">
   <div>
-    <h1>Our Kitchen Services</h1>
+    <h1>Kitchen & Laundry Services</h1>
   </div>
   <div class="row">
     @for (service of services; track service.serviceTitle) {
-      <div class="col-12 col-sm-6 col-lg-3">
+      <div class="col-12 col-sm-6 col-lg-4">
         <app-service [service]="service" />
       </div>
     }

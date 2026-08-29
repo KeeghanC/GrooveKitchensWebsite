@@ -38,6 +38,60 @@ body {
   margin-top: 0;
 }
 
+.contact-info .workshop-card {
+  position: relative;
+  overflow: hidden;
+  margin-top: 0;
+  background: linear-gradient(135deg, #4a4036 0 46%, #302a24 46% 54%, #4a4036 54% 100%);
+  font-style: normal;
+}
+
+.contact-info .workshop-card::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 0.5rem;
+  content: '';
+  background: repeating-linear-gradient(
+    -45deg,
+    #f2c991 0,
+    #f2c991 0.3rem,
+    transparent 0.3rem,
+    transparent 0.6rem
+  );
+  opacity: 0.7;
+}
+
+.workshop-location {
+  display: flex;
+  flex-direction: column;
+  color: #f2c991;
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1.35;
+  text-align: right;
+}
+
+.workshop-location small {
+  max-width: 10.5rem;
+  color: #d9c9b7;
+  font-size: 0.72rem;
+  font-weight: 400;
+}
+
+.contact-form-section .checkbox-group label {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-weight: 400;
+}
+
+.contact-form-section .checkbox-group input {
+  width: 1rem;
+  height: 1rem;
+}
+
 .call-me-icon {
   display: grid;
   flex: 0 0 2.5rem;
@@ -100,6 +154,10 @@ body {
 }
 
 @media (min-width: 992px) {
+  .col-lg-4 {
+    width: 33.333333%;
+  }
+
   .col-lg-3 {
     width: 25%;
   }

@@ -11,17 +11,18 @@ export const routes: Routes = [
     path: '',
     component: HomeComponent,
     data: {
-      title: 'Groove Kitchens | Kitchen Design & Renovations Auckland',
-      description: 'Thoughtful kitchen design, cabinetry, and renovations across Auckland.',
+      title: 'Groove Kitchens | Custom Kitchens & Renovations Auckland',
+      description:
+        'Custom kitchens, renovations, facelifts, and laundry makeovers from Groove Kitchens in Auckland.',
     },
   },
   {
     path: 'services',
     component: ServicesComponent,
     data: {
-      title: 'Kitchen Services | Groove Kitchens Auckland',
+      title: 'Kitchen & Laundry Services | Groove Kitchens Auckland',
       description:
-        'Explore kitchen design, cabinetry, renovation, benchtop, and installation services from Groove Kitchens.',
+        'Explore custom kitchen design, making, installation, renovations, facelifts, cabinetry, and laundry makeover services from Groove Kitchens.',
     },
   },
   {
@@ -38,7 +39,8 @@ export const routes: Routes = [
     component: AboutUsComponent,
     data: {
       title: 'About Groove Kitchens | Auckland Kitchen Designers',
-      description: 'Meet Groove Kitchens, creating practical, personal kitchens across Auckland.',
+      description:
+        'Meet Groove Kitchens: more than 30 years of experience creating practical, personal kitchens across Auckland.',
     },
   },
   {
@@ -47,7 +49,7 @@ export const routes: Routes = [
     data: {
       title: 'Contact Groove Kitchens | Start Your Kitchen Project',
       description:
-        'Contact Groove Kitchens to discuss your kitchen design, cabinetry, or renovation project in Auckland.',
+        'Contact Groove Kitchens to discuss your new kitchen, renovation, facelift, cabinetry, or laundry makeover in Auckland.',
     },
   },
   {
