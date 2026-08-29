@@ -26,8 +26,8 @@ export class NavComponent {
 
   constructor(private readonly windowSizeService: WindowSizeService) {
     this.windowSizeService.windowSize$.pipe(takeUntilDestroyed()).subscribe((size) => {
-      this.showLinks = size.width > 900;
-      this.isLargeScreen = size.width > 900;
+      this.showLinks = size.width > 1100;
+      this.isLargeScreen = size.width > 1100;
     });
   }
 

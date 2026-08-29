@@ -103,3 +103,9 @@
 .projects-grid {
   align-items: stretch;
 }
+
+@media (min-width: 576px) and (max-width: 799px) {
+  .inspiration-section .row .col-sm-6 {
+    width: 100%;
+  }
+}

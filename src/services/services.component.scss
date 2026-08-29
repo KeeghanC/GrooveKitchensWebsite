@@ -17,15 +17,27 @@
 
     [class*='col-'] {
       display: flex;
+      justify-content: center;
       padding: 1rem 3rem;
+
+      app-service {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+      }
     }
   }
 }
 
-// Keep service cards single-column until there is room for three cards and
-// their wider gutters.
+@media (min-width: 576px) and (max-width: 799px) {
+  .container .row .col-sm-6 {
+    width: 100%;
+  }
+}
+
+// Use a two-column layout at medium widths before moving to three columns.
 @media (min-width: 992px) and (max-width: 1250px) {
   .container .row .col-lg-4 {
-    width: 100%;
+    width: 50%;
   }
 }
