@@ -6,7 +6,7 @@
   </div>
   <div class="row projects-grid">
     @for (project of completedProjects; track project.title) {
-      <div class="col-12 col-sm-6 col-lg-6 col-xl-3">
+      <div class="col-12 col-lg-6 col-xl-3">
         <app-project class="recent-project" [project]="project"></app-project>
       </div>
     }

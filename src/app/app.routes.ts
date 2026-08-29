@@ -26,13 +26,18 @@ export const routes: Routes = [
     },
   },
   {
-    path: 'projects',
+    path: 'kitchen-inspiration',
     component: ProjectsComponent,
     data: {
       title: 'Kitchen Inspiration | Groove Kitchens Auckland',
       description:
         'Browse kitchen inspiration for practical layouts, considered materials, and beautiful storage solutions.',
     },
+  },
+  {
+    path: 'projects',
+    redirectTo: 'kitchen-inspiration',
+    pathMatch: 'full',
   },
   {
     path: 'about',

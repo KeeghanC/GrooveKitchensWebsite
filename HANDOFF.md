@@ -22,7 +22,7 @@ Routes currently include:
 
 - `/` — home page
 - `/services` — kitchen services
-- `/projects` — kitchen inspiration/projects
+- `/kitchen-inspiration` — kitchen inspiration/projects
 - `/about` — about Groove Kitchens
 - `/contact` — consultation/contact page
 - `/testimonials` — testimonials

@@ -15,6 +15,13 @@
 .recent-work-section {
   max-width: 1600px;
   margin-bottom: 0;
+
+  .projects-grid {
+    [class*='col-'] {
+      padding-top: 1.25rem;
+      padding-bottom: 1.25rem;
+    }
+  }
 }
 
 .inspiration-section {
